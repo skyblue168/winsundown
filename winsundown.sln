@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "winsundown", "winsundown\winsundown.vcproj", "{AAC1A4E3-E374-48D4-9105-9EFC5ACD1B36}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sundownlib", "sundownlib\sundownlib.vcproj", "{01AE9C08-7EA5-4A92-A562-E71DAB95709F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mdwEditor", "mdwEditor\mdwEditor.vcproj", "{F74A1C40-CC67-4463-BF9E-A5E299AF16E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAC1A4E3-E374-48D4-9105-9EFC5ACD1B36}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AAC1A4E3-E374-48D4-9105-9EFC5ACD1B36}.Debug|Win32.Build.0 = Debug|Win32
+		{AAC1A4E3-E374-48D4-9105-9EFC5ACD1B36}.Release|Win32.ActiveCfg = Release|Win32
+		{AAC1A4E3-E374-48D4-9105-9EFC5ACD1B36}.Release|Win32.Build.0 = Release|Win32
+		{01AE9C08-7EA5-4A92-A562-E71DAB95709F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{01AE9C08-7EA5-4A92-A562-E71DAB95709F}.Debug|Win32.Build.0 = Debug|Win32
+		{01AE9C08-7EA5-4A92-A562-E71DAB95709F}.Release|Win32.ActiveCfg = Release|Win32
+		{01AE9C08-7EA5-4A92-A562-E71DAB95709F}.Release|Win32.Build.0 = Release|Win32
+		{F74A1C40-CC67-4463-BF9E-A5E299AF16E2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F74A1C40-CC67-4463-BF9E-A5E299AF16E2}.Debug|Win32.Build.0 = Debug|Win32
+		{F74A1C40-CC67-4463-BF9E-A5E299AF16E2}.Release|Win32.ActiveCfg = Release|Win32
+		{F74A1C40-CC67-4463-BF9E-A5E299AF16E2}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
