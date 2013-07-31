@@ -14,9 +14,13 @@ protected: // create from serialization only
 
 // Attributes
 public:
+	CString m_AppPath;
+	CString	m_htmlPath;
+	CString m_cssPath;
 
 // Operations
 public:
+	void checkDefaultCSS();
 
 // Overrides
 public:
