@@ -128,7 +128,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "&Export Html",                ID_FILE_EXPORT
         MENUITEM SEPARATOR
-        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1
         MENUITEM SEPARATOR
         MENUITEM "E&xit",                       ID_APP_EXIT
     END
@@ -142,6 +142,9 @@ BEGIN
     END
     POPUP "&View"
     BEGIN
+        MENUITEM "CSS Change",                  ID_VIEW_CSSCHANGE
+        MENUITEM "CSS Default",                 ID_VIEW_CSSDEFAULT
+        MENUITEM SEPARATOR
         MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
         MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
     END

@@ -29,6 +29,8 @@ IMPLEMENT_DYNCREATE(CmdwEditorDoc, CDocument)
 
 BEGIN_MESSAGE_MAP(CmdwEditorDoc, CDocument)
 	ON_COMMAND(ID_FILE_EXPORT, &CmdwEditorDoc::OnFileExport)
+	ON_COMMAND(ID_VIEW_CSSCHANGE, &CmdwEditorDoc::OnViewCsschange)
+	ON_COMMAND(ID_VIEW_CSSDEFAULT, &CmdwEditorDoc::OnViewCssdefault)
 END_MESSAGE_MAP()
 
 
@@ -404,4 +406,25 @@ void CmdwEditorDoc::OnFileExport()
 		if(m_bHtmlExisted && (fdlg.GetPathName().IsEmpty() == false) )
 			::CopyFile(m_htmlPath, fdlg.GetPathName(), FALSE);
 	}
+}
+
+void CmdwEditorDoc::OnViewCsschange()
+{
+	// TODO: Add your command handler code here
+	static TCHAR BASED_CODE szFilter[] = _T("CSS Files (*.css)|*.css");
+	CFileDialog fdlg(TRUE, _T("css"), _T("*.css"), OFN_FILEMUSTEXIST|OFN_PATHMUSTEXIST, szFilter);	
+
+	if(fdlg.DoModal() != IDOK)
+		return;
+
+	::CopyFile( fdlg.GetPathName(), m_cssPath, FALSE);
+	this->UpdateAllViews(NULL, (LPARAM)(LPCTSTR)m_htmlPath, NULL);
+}
+
+void CmdwEditorDoc::OnViewCssdefault()
+{
+	// TODO: Add your command handler code here
+	::DeleteFile(m_cssPath);
+	checkDefaultCSS();
+	this->UpdateAllViews(NULL, (LPARAM)(LPCTSTR)m_htmlPath, NULL);
 }

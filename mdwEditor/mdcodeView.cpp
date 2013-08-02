@@ -67,6 +67,7 @@ int CmdcodeView::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 	// TODO:  Add your specialized creation code here
 	this->SetFont(&m_Font);
+	this->GetEditCtrl().SetLimitText(1024*1024*4);
 	return 0;
 }
 
