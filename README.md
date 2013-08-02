@@ -5,7 +5,7 @@
 
 ***This application can edit Markdown file and show HTML preview.***
 
-***You don't need install this application, just download, put it into a folder you wanted and run.***
+***You don't need to install this application, just download, put it into a folder you wanted and run.***
 
 ![mdwEditor](./graph/mdweditor.jpg)
 
@@ -25,18 +25,18 @@
 > ##### Show Markdown Syntax Dialog.
 > ![Syntax Dialog](./graph/syntaxdlg.jpg)
 > ##### You can insert markdown syntax code to your document by pressing these keys:
-  `C` **: Code block**  
-  `G` **: Image**  
-  `L` **: Link**  
-  `R` **: Horizontal rule**  
-  `T` **: Table**   
+  **`C` : Code Block  
+  `G` : Image  
+  `L` : Link  
+  `R` : Horizontal rule  
+  `T` : Table**   
 
 ### Hotkey to insert Markdown Syntax Code:
-> `ctrl-q+c` **: Code Block**  
-  `ctrl-q+g` **: Image**  
-  `ctrl-q+l` **: Link**  
-  `ctrl-q+r` **: Horizontal rule**  
-  `ctrl-q+t` **: Table**   
+> **`ctrl-q+c` : Code Block  
+> `ctrl-q+g` : Image  
+> `ctrl-q+l` : Link  
+> `ctrl-q+r` : Horizontal rule  
+> `ctrl-q+t` : Table**   
 
 ### Export Html:
 > ##### [File]->[Export Html] Export the html file to a file you selected.
