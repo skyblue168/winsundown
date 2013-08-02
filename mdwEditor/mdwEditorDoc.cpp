@@ -28,6 +28,7 @@ struct buf * mib_utf8 = NULL;
 IMPLEMENT_DYNCREATE(CmdwEditorDoc, CDocument)
 
 BEGIN_MESSAGE_MAP(CmdwEditorDoc, CDocument)
+	ON_COMMAND(ID_FILE_EXPORT, &CmdwEditorDoc::OnFileExport)
 END_MESSAGE_MAP()
 
 
@@ -115,7 +116,7 @@ BOOL readUtf8Data(CFile* pCF)
 //	char hTail[] = "</body>\n</html>";
 //}
 
-void convMd2Html(LPCTSTR outpath, const CString& csspath)
+BOOL convMd2Html(LPCTSTR outpath, const CString& csspath)
 {
 	struct buf *ob;
 	int ret;
@@ -165,6 +166,8 @@ void convMd2Html(LPCTSTR outpath, const CString& csspath)
 	bufrelease(mib_utf8);
 	bufrelease(ob);
 	mib_utf8 = NULL;
+
+	return TRUE;
 }
 
 void createDefaultCSSFile(const CString& cssPath, const CString& cssData)
@@ -203,6 +206,7 @@ CmdwEditorDoc::CmdwEditorDoc()
 
 	m_cssPath = m_AppPath + _T("mdwdefault.css");
 	m_htmlPath = m_AppPath + _T("preview_001.html");
+	m_bHtmlExisted = FALSE;
 
 	checkDefaultCSS();
 }
@@ -264,7 +268,7 @@ void CmdwEditorDoc::Serialize(CArchive& ar)
 			pCF->SeekToBegin();
 			pCF->Write(mib_utf8->data, mib_utf8->size);
 
-			convMd2Html((LPCTSTR)m_htmlPath, m_cssPath);
+			m_bHtmlExisted = convMd2Html((LPCTSTR)m_htmlPath, m_cssPath);
 			this->UpdateAllViews(NULL, (LPARAM)(LPCTSTR)m_htmlPath, NULL);
 		}
 		CATCH_ALL(e)
@@ -295,7 +299,7 @@ void CmdwEditorDoc::Serialize(CArchive& ar)
 		}
 
 		// md conver to html
-		convMd2Html((LPCTSTR)m_htmlPath, m_cssPath);
+		m_bHtmlExisted = convMd2Html((LPCTSTR)m_htmlPath, m_cssPath);
 		this->UpdateAllViews(NULL, (LPARAM)(LPCTSTR)m_htmlPath, NULL);
 	}
 }
@@ -382,3 +386,22 @@ void CmdwEditorDoc::checkDefaultCSS()
 }
 
 // CmdwEditorDoc commands
+
+void CmdwEditorDoc::OnFileExport()
+{
+	// TODO: Add your command handler code here
+	// coopy m_htmlPath to new file.
+
+	if(!m_bHtmlExisted) {
+		AfxMessageBox(_T("Please open a .md file or save current new .md file\nbefore exporting html."));
+		return;
+	}
+
+	static TCHAR BASED_CODE szFilter[] = _T("Html Files (*.html)|*.html|All Files(*.*)|*.*||");
+	CFileDialog fdlg(FALSE, _T("html"), _T("*.html"), OFN_PATHMUSTEXIST, szFilter);	
+
+	if(fdlg.DoModal() == IDOK) {
+		if(m_bHtmlExisted && (fdlg.GetPathName().IsEmpty() == false) )
+			::CopyFile(m_htmlPath, fdlg.GetPathName(), FALSE);
+	}
+}

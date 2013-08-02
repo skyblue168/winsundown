@@ -17,6 +17,7 @@ public:
 	CString m_AppPath;
 	CString	m_htmlPath;
 	CString m_cssPath;
+	BOOL	m_bHtmlExisted;
 
 // Operations
 public:
@@ -40,6 +41,8 @@ protected:
 // Generated message map functions
 protected:
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnFileExport();
 };
 
 

@@ -9,13 +9,14 @@
 #define IDD_DLGHELP                     310
 #define IDC_ST_FOCUS                    1000
 #define ID_EDIT_HELP                    32775
+#define ID_FILE_EXPORT                  32777
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        311
-#define _APS_NEXT_COMMAND_VALUE         32777
+#define _APS_NEXT_COMMAND_VALUE         32778
 #define _APS_NEXT_CONTROL_VALUE         1001
 #define _APS_NEXT_SYMED_VALUE           310
 #endif
