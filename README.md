@@ -1,13 +1,13 @@
 ﻿mdwEditor
 ==========
 
-Markdown Editor for Windows OS
+***Markdown Editor for Windows OS***
 
-This application can edit .md and view the html. 
+***This application can edit .md and view the html.***
 
-You don't need install this application, just download, put it into a folder you wanted and run.
+***You don't need install this application, just download, put it into a folder you wanted and run.***
 
-![mdwEditor](./graph/mdweditor.jpg)
+> ![mdwEditor](./graph/mdweditor.jpg)
 
 ## Function:
 
