@@ -6,6 +6,7 @@
 
 class CMainFrame : public CFrameWnd
 {
+	BOOL m_bFirstOnSize;
 	
 protected: // create from serialization only
 	CMainFrame();
@@ -45,6 +46,7 @@ protected:
 public:
 //	afx_msg void OnEditNextwin();
 //	afx_msg void OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags);
+	afx_msg void OnSize(UINT nType, int cx, int cy);
 };
 
 

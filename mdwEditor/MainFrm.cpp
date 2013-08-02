@@ -25,6 +25,7 @@ BEGIN_MESSAGE_MAP(CMainFrame, CFrameWnd)
 //	ON_WM_KEYUP()
 //ON_COMMAND(ID_EDIT_NEXTWIN, &CMainFrame::OnEditNextwin)
 //ON_WM_KEYDOWN()
+ON_WM_SIZE()
 END_MESSAGE_MAP()
 
 static UINT indicators[] =
@@ -40,6 +41,7 @@ static UINT indicators[] =
 CMainFrame::CMainFrame()
 {
 	// TODO: add member initialization code here
+	m_bFirstOnSize = TRUE;
 }
 
 CMainFrame::~CMainFrame()
@@ -87,6 +89,7 @@ BOOL CMainFrame::OnCreateClient(LPCREATESTRUCT /*lpcs*/,
 	this->GetClientRect(rt);
 
 	BOOL rc = m_wndSplitter.CreateStatic(this, 1, 2);
+
 	m_wndSplitter.CreateView(0,0, RUNTIME_CLASS(CmdcodeView), CSize(rt.Width()/2, 0), pContext);
 	m_wndSplitter.CreateView(0,1, RUNTIME_CLASS(CmdwEditorView), CSize(0, 0), pContext);
 
@@ -145,3 +148,20 @@ void CMainFrame::Dump(CDumpContext& dc) const
 #endif //_DEBUG
 
 
+void CMainFrame::OnSize(UINT nType, int cx, int cy)
+{
+	CFrameWnd::OnSize(nType, cx, cy);
+
+	// TODO: Add your message handler code here
+
+	if(m_bFirstOnSize) {
+		m_bFirstOnSize = FALSE;
+	}
+	else {
+		int cxCur, cxMin;
+		m_wndSplitter.GetColumnInfo(1, cxCur, cxMin);
+		m_wndSplitter.SetColumnInfo(0, cx/2, cxMin);
+		m_wndSplitter.RecalcLayout();
+	}
+
+}

@@ -3,39 +3,47 @@
 
 ***Markdown Editor for Windows OS***
 
-***This application can edit .md and view the html.***
+***This application can edit Markdown file and show HTML preview.***
 
 ***You don't need install this application, just download, put it into a folder you wanted and run.***
 
-> ![mdwEditor](./graph/mdweditor.jpg)
+![mdwEditor](./graph/mdweditor.jpg)
 
 ## Function:
 
 ### ctrl-s:
-> ##### Save md file and update html file.
+> ##### Save md file and update html view.
 
 ### ctrl-Tab
 > ##### Change focus between Edit View and Html View, and switch the View size.
 ![ImageText](./graph/ctrltab1.jpg)
 
 > ##### change to 
-![ImageText](./graph/ctrltab1.jpg)
+![ImageText](./graph/ctrltab2.jpg)
 
 ### ctrl-q:
 > ##### Show Markdown Syntax Dialog.
-> ##### You can press C,G,L,R,T to insert markdown syntax code to your document when this dialog is showed.
-![Syntax Dialog](./graph/syntaxdlg.jpg)
+> ![Syntax Dialog](./graph/syntaxdlg.jpg)
+> ##### You can insert markdown syntax code to your document by pressing these keys:
+  `C` **: Code block**  
+  `G` **: Image**  
+  `L` **: Link**  
+  `R` **: Horizontal rule**  
+  `T` **: Table**   
 
-### Hotkey:
-> ##### Press ctrl-q+c,  ctrl-q+g,  ctrl-q+l,  ctrl-q+r,  ctrl-q+t 
-> ##### will insert markdown syntax code to your document. 
+### Hotkey to insert Markdown Syntax Code:
+> `ctrl-q+c` **: Code Block**  
+  `ctrl-q+g` **: Image**  
+  `ctrl-q+l` **: Link**  
+  `ctrl-q+r` **: Horizontal rule**  
+  `ctrl-q+t` **: Table**   
 
 ### Export Html:
 > ##### [File]->[Export Html] Export the html file to a file you selected.
 
 ### CSS Change:
-> ##### [View]->[CSS Change] You can select a CSS file you like to replace the default CSS Style.
+> ##### [View]->[CSS Change] You can use your CSS file to replace the default CSS Style.
 
 ### CSS Default:
-> ##### [View]->[CSS Default] Restore default CSS Style, preCSS file will be delete.
+> ##### [View]->[CSS Default] Restore default CSS Style. Previous CSS file will be delete.
 	
