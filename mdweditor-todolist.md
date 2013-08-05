@@ -1,9 +1,14 @@
 ﻿# markdown Editor 待完成功能
 
-* 在執行檔所在目錄產生預設CSS檔
-* 在執行檔所在目錄產生預覽html檔
+* Edit View and Html View synchronous scrolling.
+* Add ***PageLink/FootNote*** function
 
 ----------------------------------------
+
+Finished at 2013/08/02
+
+* 在執行檔所在目錄產生預設CSS檔
+* 在執行檔所在目錄產生預覽html檔
 
 Finished at 2013/07/31
 
