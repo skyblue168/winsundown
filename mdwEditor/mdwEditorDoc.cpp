@@ -225,6 +225,36 @@ BOOL CmdwEditorDoc::OnNewDocument()
 
 	// TODO: add reinitialization code here
 	// (SDI documents will reuse this document)
+	if(m_bHtmlExisted)
+	{
+		POSITION pos = this->GetFirstViewPosition();
+		CView* cv = NULL;
+		CEditView* pEv = NULL;
+		
+		do {
+			cv = this->GetNextView(pos);
+			if( cv != NULL && cv->IsKindOf(RUNTIME_CLASS(CEditView))) {
+				pEv = (CEditView*)cv;  
+				break;
+			}
+		} while(cv != NULL);
+		if(pEv != NULL)
+			pEv->SetWindowText(_T(" "));
+
+		if(mib_utf8 != NULL) {
+			bufrelease(mib_utf8);
+			mib_utf8 = NULL;
+		}
+
+		FILE *fp = _tfopen((LPCTSTR)m_htmlPath, _T("w"));
+		if(fp != NULL) {
+			char hHead[] = "<!DOCTYPE html><html><head><meta charset=""utf-8""></head><body></body></html>";
+			fwrite(hHead, 1, sizeof(hHead), fp);
+			fclose(fp);
+		}
+
+		this->UpdateAllViews(NULL, (LPARAM)(LPCTSTR)m_htmlPath, NULL);
+	}
 
 	return TRUE;
 }

@@ -1,7 +1,7 @@
 ﻿mdwEditor
 ==========
 
-***Markdown Editor for Windows OS***
+***Markdown Editor for Windows OS :***  [Download](http://pan.baidu.com/share/link?shareid=1631494683&uk=1511399102 "Download mdw Editor")
 
 ***This application can edit Markdown file and show HTML preview.***
 
