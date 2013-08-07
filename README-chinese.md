@@ -1,4 +1,4 @@
-﻿mdwEditor
+mdwEditor
 ==========
 
 ***Windows 版的 Markdown Editor :***   [下載](http://pan.baidu.com/share/link?shareid=1631494683&uk=1511399102 "下載 mdwEditor.exe")
@@ -9,7 +9,7 @@
 
 ![mdw Editor](https://s3.amazonaws.com/logdown-production/user/3215/blog/3252/post/78663/0fHCqkmjSPyU37TJrqrS_mdweditor.jpg)
 
-## 功能:
+## 功能: 
 
 ### ctrl-s:
 > ##### 儲存 md 檔，同時更新 Html View 的內容。編輯到一個段落或是想要查看顯示效果時，可以使用此功能。

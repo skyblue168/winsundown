@@ -1,4 +1,4 @@
-﻿mdwEditor
+mdwEditor
 ==========
 
 ***Markdown Editor for Windows OS :***  [Download](http://pan.baidu.com/share/link?shareid=1631494683&uk=1511399102 "Download mdw Editor")
@@ -9,7 +9,7 @@
 
 ![mdwEditor](./graph/mdweditor.jpg)
 
-## Function:
+## Function: 
 
 ### ctrl-s:
 > ##### Save md file and update html view.

@@ -48,14 +48,14 @@ char* unicode2Utf8(LPCTSTR unicode, UINT nLen)
 
 void getEditText(LPCTSTR unicode, UINT nLen)
 {
-	int idx = 3;
+	int idx = 0;
     int len = WideCharToMultiByte(CP_UTF8, 0, unicode, nLen, NULL, 0, NULL, NULL);  
 
 	mib_utf8 = bufnew(READ_UNIT);
 	bufgrow(mib_utf8, len+idx+1);
 	memset(mib_utf8->data, 0, mib_utf8->asize);
-	memcpy(mib_utf8->data, UTF8_BOM, idx);
-	mib_utf8->size += idx;
+	//memcpy(mib_utf8->data, UTF8_BOM, idx);
+	//mib_utf8->size += idx;
 
 	mib_utf8->size += WideCharToMultiByte(CP_UTF8, 0, unicode, nLen, (LPSTR)&mib_utf8->data[idx], len, NULL, NULL);
 }
