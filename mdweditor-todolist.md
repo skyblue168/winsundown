@@ -1,7 +1,7 @@
-﻿# markdown Editor 待完成功能
+# markdown Editor 待完成功能
 
-* Edit View and Html View synchronous scrolling.
-* Add ***PageLink/FootNote*** function
+- Edit View and Html View ***synchronous scrolling*** .
+- Add ***PageLink/FootNote*** function
 
 ----------------------------------------
 
